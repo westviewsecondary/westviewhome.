@@ -1,0 +1,66 @@
+WESTVIEW SECONDARY — BLUE & ROUNDED WEBSITE
+
+UPLOAD TO GITHUB
+1. Extract this ZIP. Every file is at the top level: there are no folders.
+2. Upload all the website files directly to the root of your GitHub repository.
+   Keep index.html in the root, alongside the JavaScript, CSS and image files.
+3. Use GitHub Pages with your chosen branch and the root directory.
+4. Open your published website. Staff Control Room is in the menu and footer,
+   or go directly to westview-control.html on your site.
+
+YOUR EXISTING CONNECTION IS RETAINED
+site-config.js is copied byte-for-byte from your original ZIP, including every
+existing setting and comment. Keep it as supplied. Use the same Supabase project,
+same administrator account and password, and same documents storage bucket.
+The original login and is_admin authorisation checks remain in place.
+Changing your GitHub repository does not require a new database or new keys.
+
+WHICH SQL TO RUN
+Open WESTVIEW-LETTER-UPGRADE.sql, copy its entire contents, then paste into the
+SQL Editor in your EXISTING Supabase project and click Run.
+This adds one optional text column (letter_body) to your existing documents table.
+It does not delete records or PDFs, change accounts/keys, or replace access policies.
+It is safe to run more than once. It is not a setup script for an empty project.
+The SQL has been prepared for you, not executed on your account.
+
+The redesign and normal PDF features work without this upgrade. Run it to save
+the new full letter-text field. If it has not been run, a helpful error appears
+when saving letter text and your typed text remains in the editor.
+
+LETTERS AND PARAGRAPHS
+In Control Room, open PDF & document library.
+- Upload PDFs as before, optionally adding the letter text alongside the PDF.
+- Click Edit beside an existing document to change its title, description, date,
+  category, publication status and letter text. The original PDF stays unchanged.
+- Press Enter twice to start a paragraph, or use Add paragraph at the cursor.
+- Space existing lines puts a blank line between existing non-empty lines.
+  It does not guess where sentences should become paragraphs. Review the result,
+  especially when pasting text with line wrapping from a PDF.
+- Undo formatting reverses the last toolbar action. Preview text shows spacing.
+- Readers use Read letter text beside the document to read the formatted text.
+  PDF contents themselves are not edited by the paragraph controls.
+- Paragraph tools also work on news, notices, event details and descriptions.
+
+WHAT WAS KEPT
+All 51 original HTML pages, existing school information, saved-data connections,
+document categories, PDF upload/download, publishing controls, staff, transport,
+vacancies, exam results, notices, house points, news and events.
+The Control Room retains its original layout and controls, with letter editing added.
+
+DESIGN
+New rounded blue public interface, photo-led homepage, circular menu, school
+welcome, news and events panels, document cards and house points. Inspired by
+the layout approach at https://www.wadhamschool.co.uk/ using Westview content.
+The campus image is AI-generated illustrative artwork for fictional Westview,
+not a photograph of a real Westview campus. Replace westview-campus.png with your
+own school image whenever you wish, retaining the filename.
+
+VERIFICATION
+Checked the public live-data connection, page links and assets, JavaScript syntax,
+desktop/mobile presentation and document filtering. Tested letter rendering and
+document saves against simulated responses without publishing test records.
+Administrator sign-in and live PDF uploads require your account; these were not
+performed. No SQL has been executed and no live database data has been changed.
+
+You do not need to upload this text file or the .sql file to GitHub; they are
+included in the flat ZIP for convenience. All other files belong at the root.
